@@ -1,0 +1,129 @@
+/* Mobile (smartphones) */
+
+body > section{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#section1 > article:nth-child(1){
+    grid-column: 1/8;
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section1 article:nth-child(1) a{ 
+    color: var(--decorationColor);
+}
+
+#section1 > article:nth-child(2){
+    grid-column: 8/13;
+    text-align: end;
+    padding: 20px;
+}
+
+#section1 #content{
+    position: fixed;
+    width: 30vw;
+    padding: 5% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#content a{
+    color: var(--textColor);
+    padding: 5px;
+}
+
+#section2{
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+#section2 article:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section2 article:nth-child(1) p{
+    width: 60vw;
+    text-align: center;
+    margin: 15px 0 25px 0;
+}
+
+#section2 article:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section2 article:nth-child(2) img{
+    width: 40vw;
+}
+
+#section2 article:nth-child(2) a{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--textColor);
+    color: white;
+    border: solid 2px var(--decorationColor);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+
+/* Tablets Pequenos */
+@media screen and (min-width: 620px){
+   
+}
+
+
+/* Telas grandes e notebooks */
+@media screen and (min-width: 968px){
+    #section1 > article:nth-child(1){
+        grid-column: 1/2;
+        position: fixed;
+        padding: 20px;
+    }
+    #section1 > article:nth-child(2){
+        grid-column: 2/13;
+        text-align: end;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    #menu{
+        display: none;
+    }
+    #section1 #content{
+        display: flex !important;
+        width: 150px;
+        flex-direction: row;
+        box-shadow: none;
+    }
+    #content a{
+        display: flex;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px){
+    
+}

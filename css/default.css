@@ -1,0 +1,38 @@
+/* Variáveis */
+:root {
+    --textColor: #3498DB;
+    --backgroundColor: white;
+    --backgroundColor2: #454B54;
+    --decorationColor: #D85C6B;
+}
+/* RESET */
+body, p, a, ul, li, h1, h2{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+/* Estilos Básicos */
+
+body{
+    background: var(--backgroundColor);
+    overflow-x: hidden;
+    color: var(--textColor);
+    font-size: 14pt;
+    font-family: 'mainFont';
+}
+
+
+/* Fontes */
+@font-face{
+    font-family: 'mainFont';
+    src: url('../Roboto/Roboto-Regular.ttf');
+}
+
+h1, h2, h3{
+    font-size: 1.2em;
+    font-weight: bold;
+}
