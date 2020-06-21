@@ -17,9 +17,9 @@ function getCarros(){
     var url = BASE_URL + 'carro';
     getJSON(url,'GET', function(status, data){
         for(var i = 0; i < data.length; i++){
-            document.getElementById('section2').innerHTML += "<a href='#'>"+
+            document.getElementById('section2').innerHTML += "<a href='carro.html?placa="+data[i].placa+"'>"+
                 "<article>"+
-                    "<img src='imagens/icons8-carro-100 (1) (1).png' alt=''>"+
+                    "<img src='imagens/transporte.png' alt=''>"+
                     "<div>"+
                         "<h3>"+data[i].modelo+"</h3>"+
                         "<p>Marca: "+ data[i].marca + "<br> Ano: "+ data[i].ano +"<br> Cor: "+ data[i].cor +"</p>"+
