@@ -34,7 +34,7 @@ function getByPlaca(placa){
                 "<li>Cor: "+data.cor+"</li>"+
             "</ul>"+
         "</div>";
-    if(data.descricao !== ' '){
+    if(data.descricao !== ''){
         w += "<h4>Descrição:</h4>"+
             "<p>"+data.descricao+"</p>"+
         "</article>"+
