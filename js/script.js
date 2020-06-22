@@ -13,6 +13,32 @@ function carregaCarros(){
     this.getCarros();
 }
 
+function carregaCarro(){
+    var params = window.location.search.substring(1).split('placa=');
+    var placa = params[1];
+    this.getByPlaca(placa);
+}
+
+function getByPlaca(placa){
+    var url = BASE_URL + 'carro/' + placa;
+    getJSON(url,'GET', function(status, data){
+        document.getElementById('section2').innerHTML += "<article id='image'>"+
+        "<img src='imagens/transporte.png' alt=''>"+
+    "</article>"+
+   " <article id='description'>"+
+        "<h3>"+data.modelo+"</h3>"+
+        "<div>"+
+            "<ul>"+
+                "<li>Marca: "+data.marca+"</li>"+
+                "<li>Ano: "+data.ano+"</li>"+
+                "<li>Cor: "+data.cor+"</li>"+
+            "</ul>"+
+        "</div>"+
+    "</article>"+
+    "<a href='#'>Alugar</a>";
+    } );
+}
+
 function getCarros(){
     var url = BASE_URL + 'carro';
     getJSON(url,'GET', function(status, data){
@@ -37,6 +63,7 @@ function getCarros(){
 function getJSON(url, method, callback){
     var xhr = new XMLHttpRequest();
     xhr.open(method, url, true); //abrindo requisição para a url de forma assíncrona
+    xhr.setRequestHeader('Content-Type', 'application/json'); 
     xhr.responseType = 'json';
     xhr.onload = function(){
         var status = xhr.status;

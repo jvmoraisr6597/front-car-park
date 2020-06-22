@@ -22,39 +22,32 @@
     padding: 5vw;
 }
 
-#section2 a article img{
+#section2 article:nth-child(2){
+    margin-top: 5vw;
+    display: flex;
+    width: 80vw;
+    padding: 5vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+#section2 a{
+    width: 180px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 70px;
-    padding: 25px 12.5px 25px 12.5px;
-}
-#section2 a article div{
-    width: 40%;
-}
-
-#section2 a article div h3{
-    color: var(--decorationColor);
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-#section2 a article div p{
-    font-size: 1rem;
-    color: #7e8080;
+    background-color: var(--decorationColor);
+    color: white;
+    border-radius: 50px;
+    margin-top: 20px;
+    text-align: end;
 }
 
 /* Tablets Pequenos */
 @media screen and (min-width: 620px){
-    #section2 a article{
-        display: flex;
-        width: 400px;
-        align-items: center;
-        justify-content: space-around;
-        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-    }
+    
 }
 
 
