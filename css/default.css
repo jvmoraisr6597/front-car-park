@@ -31,7 +31,25 @@ body > section{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+.back{
+    width: 50px;
+    position: fixed;
+    height: 50px;
+    transform: translateY(80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50px;
+    margin-left: 85vw;
+    z-index: 1;
+    border: solid 1px var(--decorationColor);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
 
+.back img{
+    width: 25px;
+}
 #section1{
     width: 100vw;
     background-color: white;
