@@ -22,7 +22,7 @@ function carregaCarro(){
 function getByPlaca(placa){
     var url = BASE_URL + 'carro/' + placa;
     getJSON(url,'GET', function(status, data){
-        document.getElementById('section2').innerHTML += "<article id='image'>"+
+       var w = "<article id='image'>"+
         "<img src='imagens/transporte.png' alt=''>"+
     "</article>"+
    " <article id='description'>"+
@@ -33,9 +33,17 @@ function getByPlaca(placa){
                 "<li>Ano: "+data.ano+"</li>"+
                 "<li>Cor: "+data.cor+"</li>"+
             "</ul>"+
-        "</div>"+
-    "</article>"+
-    "<a href='#'>Alugar</a>";
+        "</div>";
+    if(data.descricao !== ' '){
+        w += "<h4>Descrição:</h4>"+
+            "<p>"+data.descricao+"</p>"+
+        "</article>"+
+        "<a href='#'>Alugar</a>";
+    }else{
+        w += "</article>"+
+        "<a href='#'>Alugar</a>";
+    }  
+    document.getElementById('section2').innerHTML = w;
     } );
 }
 

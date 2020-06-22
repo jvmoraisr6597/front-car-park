@@ -32,14 +32,21 @@ body > section{
     grid-template-columns: repeat(12, 1fr);
 }
 
+#section1{
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    z-index: 9999999999;
+}
+
 #section1 > article:nth-child(1){
     grid-column: 1/8;
-    position: fixed;
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
+
 
 #section1 article:nth-child(1) a{ 
     color: var(--decorationColor);
@@ -69,6 +76,10 @@ body > section{
 #content a{
     color: var(--textColor);
     padding: 5px;
+}
+
+#section2{
+    transform: translateY(75px);
 }
 
 /* Fontes */
