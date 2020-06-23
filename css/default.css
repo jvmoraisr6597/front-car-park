@@ -103,7 +103,7 @@ body > section{
 /* Fontes */
 @font-face{
     font-family: 'mainFont';
-    src: url('../Roboto/Roboto-Regular.ttf');
+    src: url('../static/MuseoModerno-Regular.ttf');
 }
 
 h1, h2, h3{
