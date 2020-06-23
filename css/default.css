@@ -1,9 +1,10 @@
 /* Variáveis */
 :root {
-    --textColor: #3498DB;
+    --textColor: #3598DB;
     --backgroundColor: white;
     --backgroundColor2: #454B54;
     --decorationColor: #D85C6B;
+    --pColor: #47484C;
 }
 /* RESET */
 body, p, a, ul, li, h1, h2{
@@ -31,50 +32,39 @@ body > section{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
-.back{
-    width: 50px;
-    position: fixed;
-    height: 50px;
-    transform: translateY(80px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 50px;
-    margin-left: 85vw;
-    z-index: 1;
-    border: solid 1px var(--decorationColor);
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-}
 
-.back img{
-    width: 25px;
-}
 #section1{
     width: 100vw;
-    background-color: white;
+    background-color: #3598DB;
     position: fixed;
     z-index: 9999999999;
+    display: flex;
+    padding: 1.5vw 3.5vw 1.5vw 3.5vw;
+}
+
+#section1 article{
+    width: 31vw;
 }
 
 #section1 > article:nth-child(1){
-    grid-column: 1/8;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
 
-#section1 article:nth-child(1) a{ 
-    color: var(--decorationColor);
+#section1 article:nth-child(2) a{ 
+    color: white;
     font-family: 'logo';
+    text-align: center;
+    font-size: 22px;
 }
 
 #section1 > article:nth-child(2){
-    grid-column: 8/13;
-    text-align: end;
-    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #section1 #content{
@@ -88,6 +78,7 @@ body > section{
     justify-content: center;
     border-radius: 5%;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(22.5vw);
     z-index: 1;
     display: none;
 }

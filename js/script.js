@@ -53,7 +53,9 @@ function getCarros(){
         for(var i = 0; i < data.length; i++){
             document.getElementById('section2').innerHTML += "<a href='carro.html?placa="+data[i].placa+"'>"+
                 "<article>"+
-                    "<img src='imagens/transporte.png' alt=''>"+
+                    "<div class='boximage'>"+
+                        "<img src='imagens/auto-conducao.png' alt=''>"+
+                    "</div>"+
                     "<div>"+
                         "<h3>"+data[i].modelo+"</h3>"+
                         "<p>Marca: "+ data[i].marca + "<br> Ano: "+ data[i].ano +"<br> Cor: "+ data[i].cor +"</p>"+

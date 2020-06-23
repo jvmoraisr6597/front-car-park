@@ -16,6 +16,7 @@
     width: 90vw;
     align-items: flex-start;
     justify-content: space-around;
+    border-radius: 5px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -26,18 +27,27 @@
     width: 100px;
     padding: 25px 12.5px 25px 12.5px;
 }
-#section2 a article div{
-    width: 40%;
+
+.boximage{
+    width: 40vw;
+    height: 40vw;
+    background-color: var(--textColor);
+    margin-right: 10vw;
+    border-radius: 5px 0 0 5px;
 }
 
-#section2 a article div h3{
+#section2 a article div:nth-child(2){
+    width: 40vw;
+}
+
+#section2 a article div:nth-child(2) h3{
     color: var(--decorationColor);
     font-size: 1.4rem;
     margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-#section2 a article div p{
+#section2 a article div:nth-child(2) p{
     font-size: 1rem;
     color: #7e8080;
 }
