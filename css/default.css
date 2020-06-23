@@ -68,6 +68,7 @@ body > section{
 
 #section1 article:nth-child(1) a{ 
     color: var(--decorationColor);
+    font-family: 'logo';
 }
 
 #section1 > article:nth-child(2){
@@ -102,8 +103,13 @@ body > section{
 
 /* Fontes */
 @font-face{
-    font-family: 'mainFont';
+    font-family: 'logo';
     src: url('../static/MuseoModerno-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'mainFont';
+    src: url('../Roboto_Condensed/RobotoCondensed-Regular.ttf');
 }
 
 h1, h2, h3{

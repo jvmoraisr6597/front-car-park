@@ -32,6 +32,12 @@
     justify-content: space-around;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
+
+#section2 article:nth-child(2) h3{
+    text-transform: uppercase;
+    color: var(--decorationColor);
+}
+
 #section2 a{
     width: 180px;
     height: 60px;
