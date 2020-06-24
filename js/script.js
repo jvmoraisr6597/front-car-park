@@ -21,7 +21,7 @@ function carregaCarro(){
 
 function getByPlaca(placa){
     var url = BASE_URL + 'carro/' + placa;
-    getJSON(url,'GET', function(status, data){
+    getJSON(url,'GET', false, function(status, data){
        var w = "<article id='image'>"+
         "<img src='imagens/carro (2).png' alt=''>"+
     "</article>"+
@@ -49,7 +49,7 @@ function getByPlaca(placa){
 
 function getCarros(){
     var url = BASE_URL + 'carro/available';
-    getJSON(url,'GET', function(status, data){
+    getJSON(url,'GET', false, function(status, data){
         for(var i = 0; i < data.length; i++){
             document.getElementById('section2').innerHTML += "<a href='carro.html?placa="+data[i].placa+"'>"+
                 "<article>"+
@@ -66,22 +66,58 @@ function getCarros(){
         } 
     } );
 }
+var serialize = function (form) {
+    var json = {};
+    var data = new FormData(form);
+    var keys = data.keys();
+    for (var key = keys.next(); !key.done; key = keys.next()) {
+      var values = data.getAll(key.value);
+      json[key.value] = values.length == 1 ? values[0] : values;
+    }  
+    return json;
+  }
 
+function OpenCadastro(){
+    document.getElementById("cadastro").style.marginLeft = "0";
+}
+function fechaCadastro(){
+    document.getElementById("cadastro").style.marginLeft = "-100vw";
+}
+
+function OpenLogin(){
+    document.getElementById("login").style.marginLeft = "0";
+}
+function fechaLogin(){
+    document.getElementById("login").style.marginLeft = "-100vw";
+}
+function Cadastro(){
+    var form = document.getElementById("form");
+    var json = serialize(form);	
+    var url = BASE_URL + 'user';
+    getJSON(url,'POST', json, function(status, data){
+       console.log(data);
+    } );
+}
 
 //Esta função recebe uma url para requisição e faz a busca por meio de um GET
 //Depois ela chama o callback
-function getJSON(url, method, callback){
+function getJSON(url, method, body, callback){
     var xhr = new XMLHttpRequest();
     xhr.open(method, url, true); //abrindo requisição para a url de forma assíncrona
     xhr.setRequestHeader('Content-Type', 'application/json'); 
     xhr.responseType = 'json';
     xhr.onload = function(){
         var status = xhr.status;
-        if (status === 200){
+        if (status === 200 || status === 201){
             callback(status, xhr.response);
         } else {
             console.log('ERROR: '+ status);
         }
     }
-    xhr.send();
+    if(body){
+        xhr.send(JSON.stringify(body));
+    }else{
+        xhr.send();
+    }
+    
 }
