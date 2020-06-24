@@ -99,6 +99,29 @@ function Cadastro(){
     } );
 }
 
+function Login(){
+    var form = document.getElementById("formLogin");
+    var json = serialize(form);
+    var url = BASE_URL + 'auth/login';
+    getJSON(url,'POST', json, function(status, data){
+        this.loadByEmail(json['email']);
+        sessionStorage.setItem('jwt', data.access_token);
+        this.posLogin();
+    } );
+}
+
+function posLogin(){
+    window.location.href = BASE_URL + "index.html";
+    document.getElementById("alugar").display = "flex";
+}
+
+function loadByEmail(email){
+    var url = BASE_URL + 'user/search?search=' + email;
+    getJSON(url,'GET', false, function(status, data){
+        sessionStorage.setItem('user', JSON.stringify(data));
+     } );
+}
+
 //Esta função recebe uma url para requisição e faz a busca por meio de um GET
 //Depois ela chama o callback
 function getJSON(url, method, body, callback){
