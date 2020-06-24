@@ -75,35 +75,155 @@ h1{
 
 /* Telas grandes e notebooks */
 @media screen and (min-width: 968px){
-    #section1 > article:nth-child(1){
-        grid-column: 1/2;
-        position: fixed;
-        padding: 20px;
+    #section2{
+        display: flex;
+        width: 80vw;
+        margin-left: 10vw;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        z-index: -1;
     }
-    #section1 > article:nth-child(2){
-        grid-column: 2/13;
-        text-align: end;
-        padding: 20px;
+    
+    
+    
+    #section2 a article{
+        display: flex;
+        width: 35vw;
+        height: 150px;
+        align-items: flex-start;
+        justify-content: space-around;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    #section2 a article img{
         display: flex;
         align-items: center;
-        margin-top: 10px;
+        justify-content: center;
+        width: 100px;
+        padding: 25px 12.5px 25px 12.5px;
     }
-    #menu{
-        display: none;
-    }
-    #section1 #content{
-        display: flex !important;
-        width: 150px;
-        flex-direction: row;
-        box-shadow: none;
-        padding: 0;
-    }
-    #content a{
+    
+    .boximage{
         display: flex;
+        width: 17.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        background-color: var(--textColor);
+        margin-right: 7.5vw;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    #section2 a article div:nth-child(2){
+        width: 10vw;
+        transform: translateX(-5vw);
+    }
+    
+    h1{
+        transform: translateY(125px);
+        color: black;
+        font-size: 22px;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 5vw;
+    }
+    
+    #section2 a article div:nth-child(2) h3{
+        color: var(--decorationColor);
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    
+    #section2 a article div:nth-child(2) p{
+        font-size: 1rem;
+        color: #7e8080;
     }
 }
 
 /* Desktop */
 @media screen and (min-width: 1200px){
+    #section2 a article{
+        display: flex;
+        width: 400px;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+/* Telas grandes e notebooks */
+@media screen and (min-width: 968px){
+    #section2{
+        display: flex;
+        width: 80vw;
+        margin-left: 10vw;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        z-index: -1;
+    }
+    
+    
+    
+    #section2 a article{
+        display: flex;
+        width: 35vw;
+        height: 150px;
+        align-items: flex-start;
+        justify-content: space-around;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    #section2 a article img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        padding: 25px 12.5px 25px 12.5px;
+    }
+    
+    .boximage{
+        display: flex;
+        width: 17.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        background-color: var(--textColor);
+        margin-right: 7.5vw;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    #section2 a article div:nth-child(2){
+        width: 10vw;
+        transform: translateX(-5vw);
+    }
+    
+    h1{
+        transform: translateY(125px);
+        color: black;
+        font-size: 22px;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 5vw;
+    }
+    
+    #section2 a article div:nth-child(2) h3{
+        color: var(--decorationColor);
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    
+    #section2 a article div:nth-child(2) p{
+        font-size: 1rem;
+        color: #7e8080;
+    }
     
 }

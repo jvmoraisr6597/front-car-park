@@ -48,7 +48,7 @@ function getByPlaca(placa){
 }
 
 function getCarros(){
-    var url = BASE_URL + 'carro';
+    var url = BASE_URL + 'carro/available';
     getJSON(url,'GET', function(status, data){
         for(var i = 0; i < data.length; i++){
             document.getElementById('section2').innerHTML += "<a href='carro.html?placa="+data[i].placa+"'>"+

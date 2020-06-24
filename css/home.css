@@ -59,16 +59,127 @@
 
 /* Tablets Pequenos */
 @media screen and (min-width: 620px){
-   
+    #section2 article:nth-child(2){
+        width: 45vw;
+        height: 45vw;
+        margin: 10vw 0 10vw 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #section2 article:nth-child(2) img{
+        width: 20vw;
+    }
 }
 
 
 /* Telas grandes e notebooks */
 @media screen and (min-width: 968px){
+    #section2{
+        transform: translateY(45vh);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        margin-left: 5vw;
+    }
+    #section2 article:nth-child(2){
+        width:30vw;
+        height: 30vw;
+        margin: 10vw 0 10vw 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        order: 1;
+        position: absolute;
+        margin: auto;
+        transform: translateX(-25vw);
+    }
     
+    #section2 article:nth-child(1){
+        display: flex;
+        width: 15vw;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+        margin-left: 25vw;
+    }
+
+    
+    
+    #section2 article:nth-child(2) img{
+        width: 15vw;
+    }
+
+    #section2 a{
+        width: 180px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--decorationColor);
+        color: white;
+        border-radius: 50px;
+        margin-top: 20px;
+        margin-left: 25vw;
+        order: 3;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: 1200px){
+    #section2{
+        transform: translateY(45vh);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        margin-left: 5vw;
+    }
+    #section2 article:nth-child(2){
+        width:30vw;
+        height: 30vw;
+        margin: 10vw 0 10vw 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        order: 1;
+        position: absolute;
+        margin: auto;
+        transform: translateX(-25vw);
+    }
     
+    #section2 article:nth-child(1){
+        display: flex;
+        width: 15vw;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+        margin-left: 25vw;
+    }
+
+    
+    
+    #section2 article:nth-child(2) img{
+        width: 15vw;
+    }
+
+    #section2 a{
+        width: 180px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--decorationColor);
+        color: white;
+        border-radius: 50px;
+        margin-top: 20px;
+        margin-left: 25vw;
+        order: 3;
+    }
 }
