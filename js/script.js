@@ -122,7 +122,6 @@ function posLogin(){
 
 function posCadastro(){
     document.getElementById("login").style.marginLeft = "0";
-    window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
 }
 
 function loadByEmail(email){
