@@ -96,6 +96,7 @@ function fechaLogin(){
     document.getElementById("login").style.marginLeft = "-100vw";
 }
 function Cadastro(){
+    document.getElementById("enviarCad").style.backgroundColor = "#1c1c1c";
     var form = document.getElementById("form");
     var json = serialize(form);	
     var url = BASE_URL + 'user';
@@ -105,6 +106,7 @@ function Cadastro(){
 }
 
 function Login(){
+    document.getElementById("enviarLog").style.backgroundColor = "#1c1c1c";
     var form = document.getElementById("formLogin");
     var json = serialize(form);
     var url = BASE_URL + 'auth/login';
