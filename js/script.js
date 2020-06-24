@@ -9,6 +9,14 @@ function openMenu(){
     
 }
 
+function validateSessionIndex(){
+    if(sessionStorage.getItem('jwt')){
+        window.location.href = "https://wizardly-raman-a274a6.netlify.app/index_logado.html";
+    }else{
+        window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
+    }
+}
+
 function carregaCarros(){
     this.getCarros();
 }
