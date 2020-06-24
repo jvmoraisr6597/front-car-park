@@ -28,64 +28,7 @@
         <article style="background-image: url('imagens/ponto.png'); background-repeat: no-repeat;background-size: cover;">
             <img src="imagens/carro (1).png" alt="">
         </article>
-        <a href="carros.html" id="alugar">Alugar</a>
-        <a href="#" onclick="OpenCadastro()" id="cadastrar">Cadastrar</a>
-        <a href="#" onclick="OpenLogin()" id="entrar">Entrar</a>
-    </section>
-
-    <section id="section3">
-        <article id="cadastro">
-            <span onclick="fechaCadastro()" id="spanClose">X</span>
-            <form action="" id="form">
-                <div class="row">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="name" id="nome">
-                </div>
-                <div class="row">
-                    <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" id="cpf">
-                </div>
-                <div class="row">
-                    <label for="data_nascimento">Data de Nascimento</label>
-                    <input type="string" name="data_nascimento" id="data_nascimento" placeholder="dd/mm/aaaa">
-                </div>
-                <div class="row">
-                    <label for="cep">CEP</label>
-                    <input type="number"name="cep" id="cep">
-                </div>
-                <div class="row">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" name="telefone" id="telefone">
-                </div>
-                <div class="row">
-                    <label for="end">Endereço</label>
-                    <input type="text" name="endereco" id="endereco">
-                </div>
-                <div class="row">
-                    <label for="telefone">E-mail</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="row">
-                    <label for="end">Password</label>
-                    <input type="password" name="password" id="password" style="margin-bottom: 10px;">
-                </div>
-                <span type="submit" class="enviar" onclick="Cadastro()" name="enviar" id="enviar" value="Cadastrar">Cadastrar</span>
-            </form>
-        </article>
-        <article id="login"> 
-            <span onclick="fechaLogin()" id="spanCloseLogin">X</span>
-            <form action="" id="formLogin">
-                <div class="row">
-                    <label for="telefone">E-mail</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="row">
-                    <label for="end">Password</label>
-                    <input type="password" name="password" id="password">
-                </div>
-                <span type="submit" class="enviar" onclick="Login()" name="enviar" id="enviar" value="Cadastrar">Cadastrar</span>
-            </form>
-        </article>
+        <a href="carros.html" id="alugar" style="display: flex !important;">Alugar</a>
     </section>
 </body>
 </html>

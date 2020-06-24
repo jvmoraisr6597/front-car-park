@@ -1,19 +1,10 @@
 let BASE_URL = 'https://carpark10.herokuapp.com/';
 
-function openMenu(){
-    if(document.getElementById('content').style.display == "flex"){
-        document.getElementById('content').style.display = "none";
-    }else{
-        document.getElementById('content').style.display = "flex";
-    }
-    
-}
+
 
 function validateSessionIndex(){
-    if(sessionStorage.getItem('jwt')){
-        window.location.href = "https://wizardly-raman-a274a6.netlify.app/index_logado.html";
-    }else{
-        window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
+    if(!sessionStorage.getItem('jwt')){
+        window.location.href = "https://wizardly-raman-a274a6.netlify.app/index_nao_logado.html";
     }
 }
 
