@@ -8,6 +8,12 @@ function validateSessionIndex(){
     }
 }
 
+function validateSessionIndexNL(){
+    if(sessionStorage.getItem('jwt')){
+        window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
+    }
+}
+
 function carregaCarros(){
     this.getCarros();
 }
