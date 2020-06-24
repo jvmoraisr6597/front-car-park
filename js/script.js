@@ -112,7 +112,7 @@ function Login(){
 
 function posLogin(){
     document.getElementById("alugar").display = "flex !important";
-    window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
+    window.location.href = "https://wizardly-raman-a274a6.netlify.app/index_logado.html";
 }
 
 function loadByEmail(email){
