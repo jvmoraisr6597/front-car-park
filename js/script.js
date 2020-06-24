@@ -134,8 +134,8 @@ function loadByEmail(email){
 }
 
 function logout(){
-    localStorage.removeItem('jwt');
-    localStorage.removeItem('user');
+    sessionStorage.removeItem('jwt');
+    sessionStorage.removeItem('user');
     window.location.href = "https://wizardly-raman-a274a6.netlify.app/index_nao_logado.html";
 }
 //Esta função recebe uma url para requisição e faz a busca por meio de um GET
