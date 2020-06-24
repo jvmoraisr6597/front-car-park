@@ -23,7 +23,7 @@ function getByPlaca(placa){
     var url = BASE_URL + 'carro/' + placa;
     getJSON(url,'GET', function(status, data){
        var w = "<article id='image'>"+
-        "<img src='imagens/transporte.png' alt=''>"+
+        "<img src='imagens/carro (2).png' alt=''>"+
     "</article>"+
    " <article id='description'>"+
         "<h3>"+data.modelo+"</h3>"+

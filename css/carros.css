@@ -40,6 +40,15 @@
     width: 40vw;
 }
 
+h1{
+    transform: translateY(20vw);
+    color: black;
+    font-size: 22px;
+    margin-left: 5vw;
+    letter-spacing: 1px;
+    margin-bottom: 5vw;
+}
+
 #section2 a article div:nth-child(2) h3{
     color: var(--decorationColor);
     font-size: 1.4rem;

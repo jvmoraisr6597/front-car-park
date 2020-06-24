@@ -107,3 +107,9 @@ h1, h2, h3{
     font-size: 1.2em;
     font-weight: bold;
 }
+
+
+/* Telas grandes e notebooks */
+@media screen and (min-width: 968px){
+    
+}
