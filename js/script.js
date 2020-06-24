@@ -100,7 +100,7 @@ function Cadastro(){
     var json = serialize(form);	
     var url = BASE_URL + 'user';
     getJSON(url,'POST', json, function(status, data){
-       console.log(data);
+       this.posCadastro();
     } );
 }
 
@@ -117,6 +117,11 @@ function Login(){
 
 function posLogin(){
     document.getElementById("alugar").display = "flex !important";
+    window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
+}
+
+function posCadastro(){
+    document.getElementById("login").style.marginLeft = "0";
     window.location.href = "https://wizardly-raman-a274a6.netlify.app/index.html";
 }
 

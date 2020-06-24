@@ -216,6 +216,9 @@
         margin-left: 25vw;
         order: 3;
     }
+    #section3{
+        display: none;
+    }
 }
 
 /* Desktop */
@@ -270,5 +273,8 @@
         margin-top: 20px;
         margin-left: 25vw;
         order: 3;
+    }
+    #section3{
+        display: none;
     }
 }
